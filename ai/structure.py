@@ -1,9 +1,8 @@
-from pydantic import BaseModel, Field, field_validator
-import re
+from pydantic import BaseModel, Field
 
 class Structure(BaseModel):
-    tldr: str = Field(description="generate a too long; didn't read summary")
-    motivation: str = Field(description="describe the motivation in this paper")
-    method: str = Field(description="method of this paper")
-    result: str = Field(description="result of this paper")
-    conclusion: str = Field(description="conclusion of this paper")
+    tldr: str = Field(description="A brief TL;DR summary, written in the required language")
+    motivation: str = Field(description="The motivation of this paper, written in the required language")
+    method: str = Field(description="The method of this paper, written in the required language")
+    result: str = Field(description="The result of this paper, written in the required language")
+    conclusion: str = Field(description="The conclusion of this paper, written in the required language")
